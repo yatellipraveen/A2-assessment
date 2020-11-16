@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo">
+            <img src="https://data.gov.in/sites/all/themes/ogplv3light/logo.png" alt="Open Government Data (OGD) Platform India logo">
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="search-container d-flex felx-row space-between">
+            <div>
+                <input class="input-box" placeholder="Search City" onkeyup="filterByCity()" type="text" name="Search" id="cityFilter">
+            </div>
+            <div>
+                <select class="input-box" id="sortBox" onchange="sortTable()">
+                    <option value="" disabled selected>Sort by</option>
+                    <option value="city">City</option>
+                    <option value="pollutant">Pollutant Avg</option>
+                </select>
+            </div>
+        </div>
+        <div class="metadata-container">Metadata</div>
+        <div class="table-container">
+            <table>
+                <thead class="text-white bg-green">
+                    <th onClick="sortByCity()">City</th>
+                    <th>Pollutant ID</th>
+                    <th onclick="sortByPollutantAvg()">Pollutant avg</th>
+                </thead>
+                <tbody class="table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>
